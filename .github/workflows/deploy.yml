@@ -60,18 +60,7 @@ jobs:
         run: cd /
       
       - name: Where am I?
-        run: ls -a
-      
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: lokmjj3
-          author_email: lokmjj3@gmail.com
-          message: "Deploy image file"
-          add: |
-            twokindsWorldMap.jpg
-          push: true
-          branch: gh-pages
+        run: mv twokindsWorldMap.jpg ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
