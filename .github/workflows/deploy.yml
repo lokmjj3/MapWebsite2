@@ -31,6 +31,12 @@ jobs:
           name: production-files
           path: ./dist
 
+      - name: Upload image file
+        uses: actions/upload-artifact@v2
+        with:
+          name: image-file
+          path: .twokindsWorldMap.jpg
+
   deploy:
     name: Deploy
     needs: build
@@ -43,6 +49,12 @@ jobs:
         with:
           name: production-files
           path: ./dist
+      
+      - name: Download image file
+        uses: actions/download-artifact@v2
+        with:
+          name: image-file
+          path: .twokindsWorldMap.jpg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
