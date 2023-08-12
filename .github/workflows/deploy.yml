@@ -55,6 +55,17 @@ jobs:
         with:
           name: image-file
           path: twokindsWorldMap.jpg
+      
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: lokmjj3
+          author_email: lokmjj3@gmail.com
+          message: "Deploy image file"
+          add: |
+            twokindsWorldMap.jpg
+          push: true
+          branch: gh-pages
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
