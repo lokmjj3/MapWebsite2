@@ -12,7 +12,7 @@ import { GeoJSON } from 'ol/format.js';
 import { Feature } from 'ol';
 import { Circle } from 'ol/geom';
 
-
+//test
 let map;
 let menuOpened = "";
 
