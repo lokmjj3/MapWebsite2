@@ -57,7 +57,10 @@ jobs:
           path: twokindsWorldMap.jpg
       
       - name: Change working directory
-        run: pwd
+        run: cd /
+      
+      - name: Where am I?
+        run: ls -a
       
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
