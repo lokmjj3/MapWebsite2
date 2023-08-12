@@ -8,17 +8,20 @@ import { getCenter } from 'ol/extent.js';
 import { defaults as defaultInteractions } from 'ol/interaction.js';
 import { Vector as VectorSource } from 'ol/source.js';
 import { Vector as VectorLayer } from 'ol/layer.js';
-import { GeoJSON } from 'ol/format.js';
 import { Feature } from 'ol';
 import { Circle } from 'ol/geom';
 
-//test
+
 let map;
 let menuOpened = "";
 
 document.addEventListener('DOMContentLoaded', initiate);
 
-// document.getElementById("testButton2").addEventListener("click", () => closeOpenMenu());
+const closeButtons = [...document.getElementsByClassName("closeButton")]
+closeButtons.forEach(elem => {
+  elem.addEventListener("click", () => closeOpenMenu());
+});
+
 
 function initiate() {
   const extent = [0, 0, 800, 950];
@@ -161,7 +164,7 @@ function openMenu(menuWidth, panel, callback) {
 }
 
 let initialZoom
-
+//todo: allow for zooming while opening/closing menus
 function getPercentView(pixelsToRemove) {
   //find the perentage of the map that will be left after the window's size is changed, & calculate new view so as to keep the actual stuff you see constant
   const percentChange = 1 - pixelsToRemove / map.getSize()[0];
