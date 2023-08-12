@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: image-file
-          path: .twokindsWorldMap.jpg
+          path: twokindsWorldMap.jpg
 
   deploy:
     name: Deploy
@@ -54,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: image-file
-          path: .twokindsWorldMap.jpg
+          path: twokindsWorldMap.jpg
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
