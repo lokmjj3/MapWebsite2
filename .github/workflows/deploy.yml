@@ -60,7 +60,7 @@ jobs:
         run: cd /
       
       - name: Where am I?
-        run: mv twokindsWorldMap.jpg ./dist
+        run: mv ./twokindsWorldMap.jpg/twokindsWorldMap.jpg ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
