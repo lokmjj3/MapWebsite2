@@ -56,6 +56,9 @@ jobs:
           name: image-file
           path: twokindsWorldMap.jpg
       
+      - name: Change working directory
+        run: cd ${{ github.workspace }}
+      
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7
         with:
