@@ -1,0 +1,46 @@
+@import "node_modules/ol/ol.css";
+
+html, body {
+  display: block;
+  margin: 0;
+  height: 100%;
+  background-color: #a9a5a1;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#testButton{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 12px 24px;
+      font-size: 18px;
+      cursor: pointer;
+}
+#testButton2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  margin: 30px 70px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.panel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #a9a5a1;
+  overflow-x: hidden;
+}
